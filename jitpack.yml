@@ -1,5 +1,7 @@
 jdk:
   - openjdk17
 before_install:
+  - export JAVA_HOME=/home/jitpack/tools/jdk17
   - yes | sdkmanager --licenses
+  - sdkmanager "cmake;4.0.2"
   - sdkmanager "ndk;29.0.13599879"
