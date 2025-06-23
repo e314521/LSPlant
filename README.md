@@ -5,6 +5,7 @@
 ![](https://img.shields.io/badge/arch-armeabi--v7a%20%7C%20arm64--v8a%20%7C%20x86%20%7C%20x86--64%7C%20riscv64-brightgreen.svg)
 ![](https://github.com/LSPosed/LSPlant/actions/workflows/build.yml/badge.svg?branch=master&event=push)
 ![](https://img.shields.io/maven-central/v/org.lsposed.lsplant/lsplant.svg)
+[![](https://jitpack.io/v/e314521/LSPlant.svg)](https://jitpack.io/#e314521/LSPlant)
 
 LSPlant is an Android ART hook library, providing Java method hook/unhook and inline deoptimization.
 
