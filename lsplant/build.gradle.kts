@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.agp.lib)
     alias(libs.plugins.lsplugin.jgit)
-    alias(libs.plugins.lsplugin.publish)
     alias(libs.plugins.lsplugin.cmaker)
     `maven-publish`
     signing
@@ -125,8 +124,7 @@ val repo = jgit.repo(true)
 val ver = repo?.latestTag?.removePrefix("v") ?: "0.0"
 println("${rootProject.name} version: $ver")
 
-publish {
-    githubRepo = "e314521/LSPlant"
+publishing {
     publications {
         fun MavenPublication.setup() {
             group = "com.github.e314521"
