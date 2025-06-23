@@ -2,5 +2,6 @@ jdk:
   - openjdk17
 before_install:
   - yes | sdkmanager --licenses
+  - sdkmanager "cmake;4.0.2"
 env:
   JAVA_HOME: "/home/jitpack/tools/jdk17"
