@@ -148,7 +148,7 @@ publish {
                     }
                 }
                 scm {
-                    connection = "scm:git:https://github.com/e314521d/LSPlant.git"
+                    connection = "scm:git:https://github.com/e314521/LSPlant.git"
                     url = "https://github.com/e314521/LSPlant"
                 }
             }
