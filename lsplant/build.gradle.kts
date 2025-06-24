@@ -90,15 +90,15 @@ cmaker {
     buildTypes {
         when (it.name) {
             "debug", "release" -> {
-                //arguments += "-DANDROID_STL=c++_shared"
-                arguments += "-DANDROID_STL=none"
-                arguments += "-DLSPLANT_STANDALONE=ON"
+                arguments += "-DANDROID_STL=c++_shared"
                 arguments += "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
             }
             "standalone" -> {
-                arguments += "-DANDROID_STL=none"
-                arguments += "-DLSPLANT_STANDALONE=ON"
+                arguments += "-DANDROID_STL=c++_shared"
                 arguments += "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
+                //arguments += "-DANDROID_STL=none"
+                //arguments += "-DLSPLANT_STANDALONE=ON"
+                //arguments += "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
             }
         }
         arguments += "-DDEBUG_SYMBOLS_PATH=${project.layout.buildDirectory.file("symbols/${it.name}").get().asFile.absolutePath}"
@@ -106,7 +106,7 @@ cmaker {
 }
 
 dependencies {
-    "standaloneCompileOnly"(libs.cxx)
+    //"standaloneCompileOnly"(libs.cxx)
 }
 
 val symbolsReleaseTask = tasks.register<Jar>("generateReleaseSymbolsJar") {
