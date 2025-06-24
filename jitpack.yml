@@ -2,4 +2,8 @@ jdk:
   - openjdk17
 install:
   - echo "Running a custom install command"
+  - apt update
   - apt install cmake
+before_install:
+  - sdk install java 22-open
+  - sdk use java 22-open
