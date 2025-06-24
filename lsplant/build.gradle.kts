@@ -33,9 +33,9 @@ android {
     }
 
     prefab {
-        /*register("lsplant") {
+        register("lsplant") {
             headers = "src/main/jni/include"
-        }*/
+        }
         register("lsplant_static") {
             headers = "src/main/jni/include"
         }
@@ -90,7 +90,9 @@ cmaker {
     buildTypes {
         when (it.name) {
             "debug", "release" -> {
-                arguments += "-DANDROID_STL=c++_shared"
+                //arguments += "-DANDROID_STL=c++_shared"
+                arguments += "-DANDROID_STL=none"
+                arguments += "-DLSPLANT_STANDALONE=ON"
                 arguments += "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
             }
             "standalone" -> {
