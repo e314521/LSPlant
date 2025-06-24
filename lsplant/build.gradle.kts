@@ -33,12 +33,12 @@ android {
     }
 
     prefab {
-        register("lsplant") {
+        /*register("lsplant") {
+            headers = "src/main/jni/include"
+        }*/
+        register("lsplant_static") {
             headers = "src/main/jni/include"
         }
-        //register("lsplant_static") {
-        //    headers = "src/main/jni/include"
-        //}
     }
 
     defaultConfig {
